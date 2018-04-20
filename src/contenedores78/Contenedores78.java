@@ -7,6 +7,7 @@ package contenedores78;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.HeadlessException;
@@ -15,6 +16,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SpringLayout.Constraints;
 
 /**
  *
@@ -38,7 +40,7 @@ public class Contenedores78 extends JFrame {
         Container cpane = this.getContentPane();
         
         JPanel norte = new JPanel();
-        JPanel centro = new JPanel(new GridLayout(2,3));
+        JPanel centro = new JPanel(new GridLayout(2,3,30,30));
         JPanel sur = new JPanel();
         
         //panel norte-----------------------------------------------------------
@@ -52,6 +54,8 @@ public class Contenedores78 extends JFrame {
         //panel centro----------------------------------------------------------
         
         cpane.add(centro, BorderLayout.CENTER);
+        //Constraints caract = new Constraints();
+        
         
         JButton frame = new JButton(" Ejemplo JFrame ");
         JButton dialog = new JButton(" Ejemplo JDialog ");
@@ -60,12 +64,13 @@ public class Contenedores78 extends JFrame {
         JButton splitP = new JButton(" Ejemplo JSplitPane ");
         JButton tabbedP = new JButton(" Ejemplo JTabbedPane ");
         
-        centro.add(frame);
-        centro.add(dialog);
-        centro.add(panel);
-        centro.add(scrollP);
-        centro.add(splitP);
-        centro.add(tabbedP);
+                
+        centro.add(frame, 0,0);
+        centro.add(dialog, 0,1);
+        centro.add(panel, 0,2);
+        centro.add(scrollP, 1,0);
+        centro.add(splitP, 1,1);
+        centro.add(tabbedP, 1,2);
         
         cpane.add(sur, BorderLayout.SOUTH);
     }
