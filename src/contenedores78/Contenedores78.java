@@ -11,6 +11,8 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.HeadlessException;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -22,11 +24,10 @@ import javax.swing.SpringLayout.Constraints;
  *
  * @author Gamero
  */
-public class Contenedores78 extends JFrame {
+public class Contenedores78 extends JFrame implements ActionListener{
 
-    /**
-     * @param args the command line arguments
-     */
+    JButton frame;
+    
     public static void main(String[] args) {
         Contenedores78 miVentana = new Contenedores78("Probando contenedores");
         miVentana.setBounds(300, 300, 800, 300);
@@ -54,10 +55,12 @@ public class Contenedores78 extends JFrame {
         //panel centro----------------------------------------------------------
         
         cpane.add(centro, BorderLayout.CENTER);
-        //Constraints caract = new Constraints();
+        //Constraints coord = new Constraints();
         
         
-        JButton frame = new JButton(" Ejemplo JFrame ");
+        frame = new JButton(" Ejemplo JFrame ");//lo hemos hecho global para poder hacer el boton==frame
+        frame.setName("frame");
+        frame.addActionListener(this);
         JButton dialog = new JButton(" Ejemplo JDialog ");
         JButton panel = new JButton(" Ejemplo JPanel ");
         JButton scrollP = new JButton(" Ejemplo JScrollPane ");
@@ -65,14 +68,42 @@ public class Contenedores78 extends JFrame {
         JButton tabbedP = new JButton(" Ejemplo JTabbedPane ");
         
                 
-        centro.add(frame, 0,0);
-        centro.add(dialog, 0,1);
-        centro.add(panel, 0,2);
-        centro.add(scrollP, 1,0);
-        centro.add(splitP, 1,1);
-        centro.add(tabbedP, 1,2);
+        centro.add(frame);
+        centro.add(dialog);
+        centro.add(panel);
+        centro.add(scrollP);
+        centro.add(splitP);
+        centro.add(tabbedP);
+        
+                
+        //panel sur-------------------------------------------------------------
         
         cpane.add(sur, BorderLayout.SOUTH);
+        
+        JButton desktop = new JButton(" Ejemplo JDeskTopPane ");
+        JButton toolBar = new JButton(" Ejemplo JToolBar ");
+        
+        sur.add(desktop);
+        sur.add(toolBar);
+    }//Constructor--------------------------------------------------------------
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        String textoB = e.getActionCommand();//Estos 2 lo que hacen es devolver el texto del boton o el objeto del boton
+        JButton boton = (JButton)e.getSource();
+        System.out.println(frame.getText());
+        
+        /*if(boton==frame){
+            
+        }*/
+        
+        switch(boton.getName()){
+            case "frame":
+                EjJFrame ventana = new EjJFrame();
+                ventana.setVisible(true);
+                break;
+            
+        }
     }
     
     
