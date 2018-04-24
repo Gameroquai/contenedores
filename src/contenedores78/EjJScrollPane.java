@@ -6,11 +6,12 @@
 package contenedores78;
 
 import javax.swing.JFrame;
+import javax.swing.JScrollPane;
 
 /**
  *
  * @author Gamero
  */
-public class EjJScrollPane extends JFrame {
+public class EjJScrollPane extends JScrollPane {
     
 }

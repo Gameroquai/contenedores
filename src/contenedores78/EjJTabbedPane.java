@@ -6,11 +6,12 @@
 package contenedores78;
 
 import javax.swing.JFrame;
+import javax.swing.JTabbedPane;
 
 /**
  *
  * @author Gamero
  */
-public class EjJTabbedPane extends JFrame {
+public class EjJTabbedPane extends JTabbedPane {
     
 }

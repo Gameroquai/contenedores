@@ -65,8 +65,8 @@ public class Contenedores78 extends JFrame implements ActionListener{
         
         frame = new JButton(" Ejemplo JFrame ");//lo hemos hecho global para poder hacer el boton==frame
         frame.setName("frame");
-        frame.addActionListener(this);
-        dialog = new JButton(" Ejemplo JDialog ");//lo hemos hecho global para poder hacer el boton==frame
+        frame.addActionListener(this);//el this podemos ponerlo porque la clase implementa ActionListener
+        dialog = new JButton(" Ejemplo JDialog ");
         dialog.setName("dialog");
         dialog.addActionListener(this);
         panel = new JButton(" Ejemplo JPanel ");
@@ -106,7 +106,7 @@ public class Contenedores78 extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         String textoB = e.getActionCommand();//Estos 2 lo que hacen es devolver el texto del boton o el objeto del boton
         JButton boton = (JButton)e.getSource();
-        System.out.println(frame.getText());
+        //System.out.println(frame.getText());//ver las propiedades del boton
         
         /*if(boton==frame){
             
@@ -118,24 +118,24 @@ public class Contenedores78 extends JFrame implements ActionListener{
                 ventana.setVisible(true);
                 break;
             case "dialog":
-                EjDialog ventana = new EjJDialog();
-                ventana.setVisible(true);
+                EjJDialog ventana2 = new EjJDialog(this, true);
+                ventana2.setVisible(true);
                 break;
             case "panel":
-                EjJPanel ventana = new EjJPanel();
-                ventana.setVisible(true);
+                EjJPanel ventana3 = new EjJPanel();
+                ventana3.setVisible(true);
                 break;
             case "scrollP":
-                EjJScrollPane ventana = new EjJScrollPane();
-                ventana.setVisible(true);
+                EjJScrollPane ventana4 = new EjJScrollPane();
+                ventana4.setVisible(true);
                 break;
             case "splitP":
-                EjJSplitPane ventana = new EjJSplitPane();
-                ventana.setVisible(true);
+                EjJSplitPane ventana5 = new EjJSplitPane();
+                ventana5.setVisible(true);
                 break;
             case "tabbedP":
-                EjJTabbedPane ventana = new EjJTabbedPane();
-                ventana.setVisible(true);
+                EjJTabbedPane ventana6 = new EjJTabbedPane();
+                ventana6.setVisible(true);
                 break;
         }
     }

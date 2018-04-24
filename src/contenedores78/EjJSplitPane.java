@@ -6,11 +6,12 @@
 package contenedores78;
 
 import javax.swing.JFrame;
+import javax.swing.JSplitPane;
 
 /**
  *
  * @author Gamero
  */
-public class EjJSplitPane extends JFrame {
+public class EjJSplitPane extends JSplitPane {
     
 }
