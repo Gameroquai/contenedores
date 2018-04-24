@@ -27,6 +27,11 @@ import javax.swing.SpringLayout.Constraints;
 public class Contenedores78 extends JFrame implements ActionListener{
 
     JButton frame;
+    JButton dialog;
+    JButton panel;
+    JButton scrollP;
+    JButton splitP;
+    JButton tabbedP;
     
     public static void main(String[] args) {
         Contenedores78 miVentana = new Contenedores78("Probando contenedores");
@@ -61,12 +66,22 @@ public class Contenedores78 extends JFrame implements ActionListener{
         frame = new JButton(" Ejemplo JFrame ");//lo hemos hecho global para poder hacer el boton==frame
         frame.setName("frame");
         frame.addActionListener(this);
-        JButton dialog = new JButton(" Ejemplo JDialog ");
-        JButton panel = new JButton(" Ejemplo JPanel ");
-        JButton scrollP = new JButton(" Ejemplo JScrollPane ");
-        JButton splitP = new JButton(" Ejemplo JSplitPane ");
-        JButton tabbedP = new JButton(" Ejemplo JTabbedPane ");
-        
+        dialog = new JButton(" Ejemplo JDialog ");//lo hemos hecho global para poder hacer el boton==frame
+        dialog.setName("dialog");
+        dialog.addActionListener(this);
+        panel = new JButton(" Ejemplo JPanel ");
+        panel.setName("panel");
+        panel.addActionListener(this);
+        scrollP = new JButton(" Ejemplo JPanel ");
+        scrollP.setName("scrollP");
+        scrollP.addActionListener(this);
+        splitP = new JButton(" Ejemplo JPanel ");
+        splitP.setName("splitP");
+        splitP.addActionListener(this);
+        tabbedP = new JButton(" Ejemplo JPanel ");
+        tabbedP.setName("tabbedP");
+        tabbedP.addActionListener(this);
+                
                 
         centro.add(frame);
         centro.add(dialog);
