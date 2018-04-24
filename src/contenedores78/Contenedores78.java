@@ -117,7 +117,26 @@ public class Contenedores78 extends JFrame implements ActionListener{
                 EjJFrame ventana = new EjJFrame();
                 ventana.setVisible(true);
                 break;
-            
+            case "dialog":
+                EjDialog ventana = new EjJDialog();
+                ventana.setVisible(true);
+                break;
+            case "panel":
+                EjJPanel ventana = new EjJPanel();
+                ventana.setVisible(true);
+                break;
+            case "scrollP":
+                EjJScrollPane ventana = new EjJScrollPane();
+                ventana.setVisible(true);
+                break;
+            case "splitP":
+                EjJSplitPane ventana = new EjJSplitPane();
+                ventana.setVisible(true);
+                break;
+            case "tabbedP":
+                EjJTabbedPane ventana = new EjJTabbedPane();
+                ventana.setVisible(true);
+                break;
         }
     }
     
