@@ -12,6 +12,6 @@ import javax.swing.JTabbedPane;
  *
  * @author Gamero
  */
-public class EjJTabbedPane extends JTabbedPane {
+public class EjJTabbedPane extends JFrame {
     
 }

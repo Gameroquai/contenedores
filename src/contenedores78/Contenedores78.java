@@ -18,6 +18,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JSplitPane;
 import javax.swing.SpringLayout.Constraints;
 
 /**
@@ -72,13 +73,13 @@ public class Contenedores78 extends JFrame implements ActionListener{
         panel = new JButton(" Ejemplo JPanel ");
         panel.setName("panel");
         panel.addActionListener(this);
-        scrollP = new JButton(" Ejemplo JPanel ");
+        scrollP = new JButton(" Ejemplo JScrollPane ");
         scrollP.setName("scrollP");
         scrollP.addActionListener(this);
-        splitP = new JButton(" Ejemplo JPanel ");
+        splitP = new JButton(" Ejemplo JSplitPane ");
         splitP.setName("splitP");
         splitP.addActionListener(this);
-        tabbedP = new JButton(" Ejemplo JPanel ");
+        tabbedP = new JButton(" Ejemplo JTabbedPane ");
         tabbedP.setName("tabbedP");
         tabbedP.addActionListener(this);
                 
@@ -130,7 +131,7 @@ public class Contenedores78 extends JFrame implements ActionListener{
                 ventana4.setVisible(true);
                 break;
             case "splitP":
-                EjJSplitPane ventana5 = new EjJSplitPane();
+                EjJSplitPane ventana5 = new EjJSplitPane("Ejemplito", true, JSplitPane.HORIZONTAL_SPLIT,true);
                 ventana5.setVisible(true);
                 break;
             case "tabbedP":
